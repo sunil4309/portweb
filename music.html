@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head><meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Music</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+<header class="nav">
+    <a class="logo" href="index.html">
+        <img src="images/logo.svg" class="site-logo"/>
+        <span class="site-name">pikslnet</span>
+    </a><button class="hamburger" aria-label="Open Menu" id="menuBtn"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="music.html">Music</a>
+        <a href="pcspec.html">PC Specs</a></nav></header>
+<main><section class="music-ui">
+    <div class="album-art">
+        <img id="albumCover" src="images/default.jpg" alt="Album art"></div>
+        <div class="track-info"><h2 id="trackTitle">Track Name</h2>
+            <p id="trackArtist">Artist</p></div><div class="progress">
+                <span id="currentTime">0:00</span><input type="range" id="seekBar" value="0" min="0" max="100">
+                <span id="duration">0:00</span></div><div class="controls">
+                    <button id="prev">⏮</button><button id="playPause">▶</button><button id="next">⏭</button></div>
+                    <div class="volume-control"><span>🔊</span><input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1">
+                    </div><ul id="playlist" class="playlist">
+                        <!-- <li data-src="" data-cover="" data-artist="Artist A">Name</li> -->
+                        <li data-src="audios/barbaad.mp3" data-cover="images/Humsafar.png" data-artist="Artist A">Barbaad</li>
+                        <li data-src="audios/dhun.mp3" data-cover="images/cover2.png" data-artist="Artist B">Dhun</li>
+                        <li data-src="audios/pardesiya.mp3" data-cover="images/pardesiya.svj.jpg" data-artist="Artist A">Pardesiya</li>
+                        <li data-src="audios/tum_ho_toh.mp3" data-cover="images/Tum ho toh.png" data-artist="Artist A">Tum Ho Toh</li>
+                    </ul><audio id="audioPlayer"></audio></section></main>
+<script src="js/script.js" defer></script>
+<script src="js/music.js" defer></script>
+</body>
+</html>
