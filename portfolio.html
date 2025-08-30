@@ -1,34 +1,74 @@
 <!doctype html>
-<html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="nav">
-    <a class="logo" href="index.html">
+  <a class="logo" href="index.html">
     <img src="images/logo.svg" class="site-logo"/>
-    <span class="site-name">pikslnet</span></a>
-    <button class="hamburger" aria-label="Open Menu" id="menuBtn"><span></span><span></span><span></span></button>
-    <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a class="active" href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a><a href="music.html">Music</a>
-        <a href="pcspec.html">PC Specs</a>
-    </nav>
+    <span class="site-name"></span>
+  </a>
+  <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a class="active" href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="music.html">Music</a>
+    <a href="pcspec.html">PC Specs</a>
+  </nav>
 </header>
+
 <main>
-    <section class="portfolio-page">
-    <h1 class="page-title">Portfolio</h1><div class="portfolio-grid"><figure>
-        <img src="images/placeholder1.jpg" alt=""><figcaption>Branding — Neon</figcaption>
-    </figure><figure><img src="images/placeholder2.jpg" alt="">
-        <figcaption>Poster — Glitch</figcaption></figure>
-        <figure><img src="images/placeholder3.jpg" alt="">
-            <figcaption>UI — Dashboard</figcaption></figure>
-        </div>
+    <main class="portfolio-page">
+    <!-- Hero -->
+    <section class="portfolio-hero">
+      <h1 class="glitch" data-text="PORTFOLIO">PORTFOLIO</h1>
+      <p class="intro-text">
+        Here’s a showcase of my creative work — blending futuristic aesthetics, 
+        electric purple energy, and cutting-edge graphic design.  
+        Every project is crafted with precision, style, and vision for tomorrow.
+      </p>
     </section>
+    <p class="portfolio-intro">
+      A curated selection of my futuristic designs — crafted with neon glow, glitch aesthetics, and cyber vibes.
+    </p>
+
+    <!-- Grid Showcase -->
+    <div class="portfolio-grid">
+      <figure class="portfolio-item wide">
+        <img src="images/placeholder1.jpg" alt="">
+        <figcaption>Branding — Neon</figcaption>
+      </figure>
+      <figure class="portfolio-item">
+        <img src="images/placeholder2.jpg" alt="">
+        <figcaption>Poster — Glitch</figcaption>
+      </figure>
+      <figure class="portfolio-item tall">
+        <img src="images/placeholder3.jpg" alt="">
+        <figcaption>UI — Dashboard</figcaption>
+      </figure>
+      <figure class="portfolio-item">
+        <img src="images/placeholder4.jpg" alt="">
+        <figcaption>Social Media Design</figcaption>
+      </figure>
+      <figure class="portfolio-item wide">
+        <img src="images/placeholder5.jpg" alt="">
+        <figcaption>3D Futuristic Mockup</figcaption>
+      </figure>
+      <figure class="portfolio-item">
+        <img src="images/placeholder6.jpg" alt="">
+        <figcaption>Experimental Visual</figcaption>
+      </figure>
+    </div>
+  </section>
 </main>
+
 <script src="js/script.js" defer></script>
 </body>
 </html>

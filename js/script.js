@@ -27,3 +27,40 @@ menuBtn.addEventListener("click", () => {
   };
   onScroll();
   window.addEventListener('scroll', onScroll);
+
+                                                          // Contact form                                                       
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const popup = document.getElementById("successPopup");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+
+        if (response.ok) {
+          form.reset();
+          popup.classList.add("show");
+
+          // Hide popup after 3 seconds
+          setTimeout(() => {
+            popup.classList.remove("show");
+          }, 3000);
+        } else {
+          alert("❌ Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("⚠️ Network error, please try again.");
+      }
+    });
+  }
+});
+
+
