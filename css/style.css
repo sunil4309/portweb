@@ -996,6 +996,84 @@ h1{ font-family:"Rajdhani",system-ui; font-size:clamp(36px,6vw,72px); line-heigh
   to { opacity: 1; transform: scale(1); }
 }
 
+/* Buttons */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cyber-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  background: rgba(10, 0, 30, 0.85);
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Rotating neon border */
+.cyber-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    var(--primary, #6f00ff),
+    var(--primary-2, #9b30ff),
+    var(--primary, #6f00ff)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rotateBorder 12s linear infinite; /* smooth rotation */
+  z-index: -1;
+}
+
+/* Inner pulsing hologram core */
+.cyber-btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: rgba(10, 0, 30, 0.9);
+  z-index: -1;
+  animation: innerPulse 4s ease-in-out infinite;
+}
+
+/* Hover effect: glowing aura */
+.cyber-btn:hover {
+  color: #fff;
+  text-shadow: 0 0 12px var(--primary-2, #9b30ff);
+  box-shadow: 0 0 20px var(--primary, #6f00ff), 0 0 40px var(--primary-2, #9b30ff);
+}
+
+/* Smooth rotating border */
+@keyframes rotateBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Inner glow pulsing */
+@keyframes innerPulse {
+  0%, 100% { background: rgba(10, 0, 30, 0.9); }
+  50% { background: rgba(30, 0, 60, 0.95); }
+}
+
+
                                                               /* =======================
                                                                           FOOTER
                                                                  ======================= */
