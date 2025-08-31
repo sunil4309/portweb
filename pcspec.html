@@ -1,36 +1,44 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <title>PC Specs</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-  <!-- Navbar -->        
+<head><meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>pikslnet — Designs from the Future</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="bg-grid"></div><div class="bg-stars"></div>
 <header class="nav">
-    <a class="logo" href="index.html">
-        <img src="images/logo.svg" class="site-logo"/>
-        <span class="site-name"></span></a>
-        <button class="hamburger" aria-label="Open Menu" id="menuBtn"><span></span><span></span><span></span></button>
-        <nav class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="music.html">Music</a>
-            <a class="active" href="pcspec.html">PC Specs</a>
-        </nav>
-    </header>
-<main><section class="pcspecs">
-    <h1>PC Build Specs</h1>
-    <div id="pcProducts"></div>
-</section>
-</main>
-<footer class="footer">
-  <p>© <span id="year">
-  </span> pikslnet • Crafted in electric purple ⚡</p>
-</footer>
-<script src="js/script.js" defer></script>
-<script src="js/pcspec.js" defer></script>
+  <a class="logo" href="index.html">
+    <img src="images/logo.svg" alt="pikslnet logo" class="site-logo">
+  </a>
+  <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a  href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="music.html">Music</a>
+    <a class="active" href="pcspec.html">PC Spec</a>
+  </nav>
+</header>
+</header>
+<main>
+    <main class="portfolio-page">
+    <!-- Hero -->
+    <section class="portfolio-hero">
+      <h1 class="glitch" data-text="PC SPECS">PC SPECS</h1>
+      <p class="page-intro">
+         Here’s the tech that keeps me going my setup built for design, gaming, and everything in between.
+      </p>
+    </section>
+  <main>
+    <section class="pcspec-page">
+      <div class="pcspec-list" id="pcspecList"></div>
+    </section>
+  </main>
+
+  <script src="js/pcspec.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

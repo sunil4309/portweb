@@ -92,3 +92,6 @@ lightbox.addEventListener("click", (e) => {
 
 
 
+
+
+

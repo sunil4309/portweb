@@ -1072,6 +1072,111 @@ h1{ font-family:"Rajdhani",system-ui; font-size:clamp(36px,6vw,72px); line-heigh
   0%, 100% { background: rgba(10, 0, 30, 0.9); }
   50% { background: rgba(30, 0, 60, 0.95); }
 }
+                                                              /* =======================
+                                                                      PCSPEC PAGE
+                                                                 ======================= */
+
+/* PC Specs Layout */
+
+.pcspec-page {
+  padding: 3rem 2rem;
+}
+
+.pcspec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pcspec-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(20, 20, 30, 0.9);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 25px rgba(111, 0, 255, 0.3);
+  transition: transform 0.3s ease;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.pcspec-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(111, 0, 255, 0.6);
+}
+
+.pcspec-img img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.pcspec-info {
+  flex: 1;
+  padding: 0 2rem;
+  min-width: 200px;
+}
+
+.pcspec-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.pcspec-info p {
+  color: #ccc;
+  font-size: 2rem;
+}
+
+.pcspec-price {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #6f00ff, 0 0 20px #6f00ff;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
+/* ✅ Responsive behavior */
+@media (max-width: 768px) {
+  .pcspec-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .pcspec-img img {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 1rem;
+  }
+
+  .pcspec-info {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .pcspec-price {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}
+/* Add padding for desktop screens */
+@media (min-width: 1024px) {
+  .pcspec-card {
+    padding-left:rem;
+    margin-right: 2rem;
+    margin-top:rem;   /* increase padding for desktop */
+  }
+
+  .pcspec-info h3 {
+    font-size: 1.6rem;  /* make title a bit bigger */
+  }
+
+  .pcspec-info p {
+    font-size: 1rem;
+  }
+}
 
 
                                                               /* =======================
