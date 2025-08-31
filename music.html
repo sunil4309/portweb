@@ -1,27 +1,31 @@
 <!doctype html>
 <html lang="en">
-    <head><meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <title>Music</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-  <!-- Navbar -->        
-<header class="nav">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Music</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
     <a class="logo" href="index.html">
-        <img src="images/logo.svg" class="site-logo"/>
-        <span class="site-name"></span>
-    </a><button class="hamburger" aria-label="Open Menu" id="menuBtn"><span></span><span></span><span></span></button>
+      <img src="images/logo.svg" class="site-logo"/>
+      <span class="site-name"></span>
+    </a>
+    <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-        <a class="active" href="music.html">Music</a>
-        <a href="pcspec.html">PC Specs</a>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="music.html">Music</a>
+      <a href="pcspec.html">PC Specs</a>
     </nav>
-</header>
-<main>
-        <main class="portfolio-page">
+  </header>
+
+  <main class="portfolio-page">
     <!-- Hero -->
     <section class="portfolio-hero">
       <h1 class="glitch" data-text="MUSIC">MUSIC</h1>
@@ -29,32 +33,61 @@
         Music fuels my creativity. From beats to soundscapes, here’s a glimpse of what I vibe to.
       </p>
     </section>
+
+    <!-- Music UI -->
     <section class="music-ui">
-    <div class="album-art">
-        <img id="albumCover" src="images/default.jpg" alt="Album art"></div>
-        <div class="track-info"><h2 id="trackTitle">Track Name</h2>
-            <p id="trackArtist">Artist</p></div><div class="progress">
-                <span id="currentTime">0:00</span><input type="range" id="seekBar" value="0" min="0" max="100">
-                <span id="duration">0:00</span></div><div class="controls">
-                    <button id="prev">⏮</button><button id="playPause">▶</button><button id="next">⏭</button></div>
-                    <div class="volume-control"><span>🔊</span><input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1">
-                    </div><ul id="playlist" class="playlist">
-                        <!-- <li data-src="" data-cover="" data-artist="Artist A">Name</li> -->
-                        <li data-src="audios/barbaad.mp3" data-cover="images/barbaad.png" data-artist="Jubin Nautilya">Barbaad</li>
-                        <li data-src="audios/dhun.mp3" data-cover="images/Dhun.png" data-artist="Arijit Singh">Dhun</li>
-                        <li data-src="audios/pardesiya.mp3" data-cover="images/pardesiya.svj.jpg" data-artist="Artist A">Pardesiya</li>
-                        <li data-src="audios/tum_ho_toh.mp3" data-cover="images/Tum ho toh.png" data-artist="Vishal Mishra">Tum Ho Toh</li>
-                        <li data-src="audios/Nanchaku Seedhe Maut 320 Kbps.mp3" data-cover="images/Nanchaku-Seedhe-Maut-.png" data-artist="seedhe Maut">Nanchaku</li>
-                        <li data-src="audios/Kodak King 320 Kbps.mp3" data-cover="images/kodak-Seedhe Maut.png" data-artist="King,Seedhe Maut">kodak</li>
-                        <li data-src="audios/Madira.mp3" data-cover="images/Madira.png" data-artist="Seedhe Maut">Madira</li>
-                    </ul><audio id="audioPlayer"></audio>
-                </section>
-            </main>
-            <footer class="footer">
-  <p>© <span id="year">
-  </span> pikslnet • Crafted in electric purple ⚡</p>
-</footer>
-<script src="js/script.js" defer></script>
-<script src="js/music.js" defer></script>
+      <div class="album-art">
+        <img id="albumCover" src="images/default.jpg" alt="Album art">
+      </div>
+
+      <!-- Track section with hover buttons -->
+      <div class="track-section">
+        <div class="track-info">
+          <!-- Hover buttons -->
+          <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="playPause">▶</button>
+            <button id="next">⏭</button>
+          </div>
+          <!-- Song info -->
+          <h2 id="trackTitle">Track Name</h2>
+          <p id="trackArtist">Artist</p>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="seekBar" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+
+      <!-- Volume -->
+      <div class="volume-control">
+        <span>🔊</span>
+        <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1">
+      </div>
+
+      <!-- Playlist -->
+      <ul id="playlist" class="playlist">
+        <li data-src="audios/barbaad.mp3" data-cover="images/barbaad.png" data-artist="Jubin Nautilya">Barbaad</li>
+        <li data-src="audios/dhun.mp3" data-cover="images/Dhun.png" data-artist="Arijit Singh">Dhun</li>
+        <li data-src="audios/pardesiya.mp3" data-cover="images/pardesiya.svj.jpg" data-artist="Artist A">Pardesiya</li>
+        <li data-src="audios/tum_ho_toh.mp3" data-cover="images/Tum ho toh.png" data-artist="Vishal Mishra">Tum Ho Toh</li>
+        <li data-src="audios/Nanchaku Seedhe Maut 320 Kbps.mp3" data-cover="images/Nanchaku-Seedhe-Maut-.png" data-artist="Seedhe Maut">Nanchaku</li>
+        <li data-src="audios/Kodak King 320 Kbps.mp3" data-cover="images/kodak-Seedhe Maut.png" data-artist="King, Seedhe Maut">Kodak</li>
+        <li data-src="audios/Madira.mp3" data-cover="images/Madira.png" data-artist="Seedhe Maut">Madira</li>
+      </ul>
+      <audio id="audioPlayer"></audio>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet • Crafted in electric purple ⚡</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/music.js" defer></script>
 </body>
 </html>
