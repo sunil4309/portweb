@@ -45,7 +45,7 @@ const pcProducts = [
     {
     name: "Keyboard",
     description: "60% Wired RGB Gaming Keyboard | Mechanical Keyboard with Linear Red Switch | Pro Driver Support",
-    price: "₹ 8,599",
+    price: "₹ 3,399",
     img: "spec/K630i.png"
   },
     {
