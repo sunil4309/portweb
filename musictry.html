@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Music</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <img src="images/logo.svg" class="site-logo"/>
+      <span class="site-name"></span>
+    </a>
+    <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="music.html">Music</a>
+      <a href="pcspec.html">PC Specs</a>
+    </nav>
+  </header>
+
+  <main class="portfolio-page">
+    <!-- Hero -->
+    <section class="portfolio-hero">
+      <h1 class="glitch" data-text="MUSIC">MUSIC</h1>
+      <p class="intro-text">
+        Music fuels my creativity. From beats to soundscapes, here’s a glimpse of what I vibe to.
+      </p>
+    </section>
+
+<!-- 🎵 Music Section Start -->
+<section id="music-section" class="music-section">
+  <h2 class="music-title">🎧 Music Playlist</h2>
+
+  <div class="music-container">
+    <div class="player">
+      <audio id="audio-player" controls preload="metadata">
+        <source src="music/song1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <ul id="playlist" class="playlist">
+        <li class="active" data-src="audios/Madira.mp3">Madira - Seedhe maut</li>
+        <li data-src="audios/dhun.mp3">Dhun - Arijit Singh</li>
+        <li data-src="audios/Namastute.mp3">Namastute - Seedhe Maut</li>
+      </ul>
+    </div>
+
+    <!-- Lyrics Section (Visible only on PC) -->
+    <div class="lyrics">
+      <h3>Lyrics</h3>
+      <div class="lyrics-scroll">
+        <p id="lyrics-text">
+          Select a song to view its lyrics here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .music-section {
+    padding: 40px 20px;
+    background: #121212;
+    color: #fff;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .music-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .music-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .player {
+    flex: 1;
+  }
+
+  #audio-player {
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .playlist {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .playlist li {
+    padding: 10px;
+    background: #1f1f1f;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .playlist li:hover {
+    background: #333;
+    transform: scale(1.02);
+  }
+
+  .playlist li.active {
+    background: #ff006a;
+    color: #fff;
+  }
+
+  .lyrics {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lyrics h3 {
+    margin-bottom: 10px;
+  }
+
+  .lyrics-scroll {
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff006a #1a1a1a;
+    position: relative;
+  }
+
+  /* Scrollbar Styling */
+  .lyrics-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  .lyrics-scroll::-webkit-scrollbar-thumb {
+    background: #ff006a;
+    border-radius: 4px;
+  }
+
+  /* Gradient fade at top & bottom for aesthetics */
+  .lyrics::before,
+  .lyrics::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    pointer-events: none;
+  }
+  .lyrics::before {
+    top: 0;
+    background: linear-gradient(to bottom, #1a1a1a, transparent);
+  }
+  .lyrics::after {
+    bottom: 0;
+    background: linear-gradient(to top, #1a1a1a, transparent);
+  }
+
+  .lyrics p {
+    white-space: pre-line;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* Hide lyrics on mobile */
+  @media (max-width: 768px) {
+    .music-container {
+      flex-direction: column;
+    }
+
+    .lyrics {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const audioPlayer = document.getElementById("audio-player");
+  const playlistItems = document.querySelectorAll("#playlist li");
+  const lyricsBox = document.getElementById("lyrics-text");
+
+  // 🎵 Lyrics data for each song
+  const lyrics = { 
+                                                       // MADIRA
+    "audios/Madira.mp3": `[Intro]
+Mai bas dekhe jau teri raah
+Ye samay bhi tham chuka hai
+Ab ye kavita hai tere naam
+Ham is madira me duube jaye
+
+[Calm : Chorus]
+Kabhi khafa naa, hona dubara
+Kari jo galti, aage nahi dohrana
+Tu bhi (Tu bhi)
+Kabhi na maana, abhi awara
+Vo hi thi bas khush rehne ka bahana
+Yuu hii (Yuu hii)
+Mai bas dekhe jau teri raah
+Ye samay bhi tham chuka hai
+Ab ye kavita hai tere naam
+Ham is madira me duube jaye
+Mai bas dekhe jau teri raah
+Ye samay bhi tham chuka hai
+Ab ye kavita hai tere naam
+Ham is madira me doobe jaye
+
+[Calm : Verse 1]
+Vo kabhi thi gaana, kabhi thikana
+Kabhi thi pyaar aur kabhi di sahara
+Kabhi thi varsha, kabhi thi chaata
+Kabhi thi dost aur kabhi thi jwaala
+Kabhi tha gam mai to aati bas yaha par
+Kabhi vo naak me dam jese zukham hai
+Utha mai kalam ke dam par, nhi rehna yaha calm
+Tabhi L ayega silent is naam me
+Vo bulari ghar abhi busy hu kaam se
+Pasand aayi bandi vo dikhti thi gram pe
+Kari ni heal abhi ghav tere sath ke
+Saapo ki nagri me chalu mai dhyan se
+Teri kuch iccha thi mere bhi khwaab the
+Pucha tha jobhi ha sare jawab de
+Tune di shiksha, nhi haarunga pyar se
+Tere se sikha, nhi haarunga pyar se
+
+[Encore : Verse 2]
+Lade dhade pade ghusse diwaar pe
+Goli bhari padi ghode ke naal pe
+Goli chali padi, lage mare lage
+Gale pe patthar hai bade bade
+Gale lage gali meri, kate gale
+Jaha pe khone ke gusse se fatte pade
+Yaha pe rustom hai hind ab suna sabne
+Aapke sar na uthe aapke ghutne tike, jaaha pe
+Kavi hai chahte kehna ke pyari jawab hai
+Jo tera bahari swabh hai vo tujhe duniya ko darshata hai
+Aur tere andar ka insan tu ache se jaanta hai, ya mai janta hu
+Kitni backchodi me jeeke tu jeet rahi hai, mai maanta hu
+Mai naapta hu logo ko fitrat se
+Taki tujh jesi jab mile to tujhe pehchan paau
+
+[Chorus : Calm]
+Kabhi khafa naa, hona dubara
+Kari jo galti, aage nahi dohrana
+Tu bhi (Tu bhi)
+Mai bas dekhe jau teri raah
+Ye samay bhi tham chuka hai
+Ab ye kavita hai tere naam
+Ham is madira me doobe jaye
+Mai bas dekhe jau teri raah
+Ye samay bhi tham chuka hai
+Ab ye kavita hai tere naam
+Ham is madira me doobe jaye`,
+    
+                                                          // DHUN
+    "audios/dhun.mp3": `[Intro]
+Mm-mm
+Hm-mm, oh-oh
+Oh-oh-oh-oh
+Oh-oh-oh-oh, oh-oh
+
+[Verse 1]
+Shohratein to nahi hain mili
+Naa raees hoon main bada
+Jeb mein hai nahi kuch magar
+Aas hai jo wo sun le zara
+
+[Chorus]
+Tere iss dil ko churaane ke liye
+Hai yahi ek dhun
+Sanam ko apna banaane ke liye
+Hai yahi ek dhun
+Hai yahi ek dhun
+
+[Post-Chorus]
+Ho-oh, aa-oh-oh
+Na-ne-ein-ein
+Oh-oh, n-n-n-na-n-na
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ho-oh-oh-oh, ho-ho
+See upcoming pop shows
+Get tickets for your favorite artists
+You might also like
+Dhun
+Mithoon & Arijit Singh
+Faheem Abdullah - Saiyaara (Romanized)
+Genius Romanizations
+Jubin Nautiyal - Barbaad (Romanized)
+Genius Romanizations
+[Verse 2]
+Jab bhi barsaat aaye, palkon mein dhaank lunga
+Na kami koi khalegi, tujhe itna pyaar dunga
+Chaand-taare le aaun, hai ye to mumkin nahi
+Par vaada hai ye kasam se, tere saath main rahunga
+Tere saath main rahunga
+
+[Refrain]
+Ye main daawa nahi kar raha
+Koi Taj Mahal hai mera
+Naam ki chand deewarein hain
+Jinko hi ghar main kehta raha
+
+[Chorus]
+Tere iss ghar ko sajaane ke liye
+Hai yahi ek dhun
+Sanam ko apna banaane ke liye
+Hai yahi ek dhun
+Hai yahi ek dhun
+
+[Post-Chorus]
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ek dhun
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ek dhun
+[Outro]
+Tere iss dil ko churaane ke liye
+Hai yahi ek dhun`,
+                                                    // NAMASTUTE
+    "audios/Namastute.mp3": `[Verse 1: Encore ABJ]
+Kalam jale, dard dukhe, marham bane
+Aashvaasan andhvishwasi, bharam toote
+Sabhi jhooke aur shraddha se bole, "Seedhe Maut, namastute"
+Karam jale naastik, de tera bhai jab darshan, bana dun aastik
+Hun main nahi devta kadachit kholun jab muh sab bole aaya rakshas
+Hun main nahi plastic, sunun bas Pac
+Sick rapper'on ko dun prep talk
+Vo fir bhi toxic, fir bhi noxious
+Di Ted Talk vo dekhe Tik Tok bas
+(Teri thoot bigaad dunga)
+Mera kya mai club mein baitha kara ra moshpit
+Launde bane chaal baaz
+Tera bhai Karl Marx prophet, dekhe nahi profit
+Gira, bana dhoomketu
+Chhodi prithvi, padhaara moon pe hun
+To chale, chale mera Shani alag
+Du mai tujhe hafta, Shanidan, chote baat meri maan
+Shakal se tu shanichar hai
+Rakhta jo money mann hai, marta vo mann hi mann hai
+Meri jaan
+Aankhe teri nam hi nam hai, dil ka tu dhani kam hai
+Rakhe nahi jaate khushiyon pe daam
+Muh pe saare lovey-dovey
+Sachi baatein kabhi nahi, koi nahi, bolu kya mai jiski hai mati maari
+Maari maine jhakk hai nahi, kiya kaam
+Kheecha sara paisa saala, pakad ke girebaan
+Deke bae ko izzat hue beizzat
+Kase khud ke pech vo bhi bina pechkas
+Flyer pe MGK saath, kiya Lace Up
+Yaha pe launde bas fly hum (Way up)
+Jaana hai jisko jaaye jaani don’t (Wait up)
+Ulte paao bhagte ye saare jaise (Pret sab)
+Chale ye haath fookta kalam kash (Pe kash)
+Nashe ka pesha hai mera, ye hai meri peshkash
+See upcoming rap shows
+Get tickets for your favorite artists
+You might also like
+Nanchaku
+Seedhe Maut & MC Stan
+Seedhe Maut - Madira (Romanized)
+Genius Romanizations
+King & Seedhe Maut - KODAK (Romanized)
+Genius Romanizations
+[Verse 2: Calm]
+ABJ bola tu ghussa thook abhi
+To bola me shaant hoke whoo sa (Psych)
+Naam sunke fat'ti Yakuza
+Haan nikle sabka jaloos aaj
+Ye ghiske bann jayenge dhool aaj
+Hunt ho jaaye bas jal jaayega choolah
+Michelin star chef Khanna, nuska dunga curry ka rukja
+Yahan launde lage hue scheme mein
+Humein bhi aata tareeka tuccha
+Bichaare khush hain fodd ke phoonk bomb
+Yaha pe ladi ka guccha
+Kuch saanp hain, kareebi baatein
+Jalebi, humse, jale bhi saath hain
+Bole par, chahte bhala ni
+Unse zyada vafaadaar gully ka kutta
+Wo na kaate dekh ke dum hilaata
+Inpe ek hi feeki trick hai zero kaata
+Jo bole, "Rap se paise kaise laayega?"
+Mere joote mehenge unke rent se zyada
+Ye chupe khaata, baap ka pension aadha
+Hai ni tension aata inhe pen chabaana
+Khaali the bas hum dono thi lagi jab tabhi ni banta ab kisi ka haq jamaana
+Tera clout mera lund pe (Laude!)
+Ye ball ke naam pe daale bas bhatta
+Tera bhai janam se
+Seedhe Maut cheat code maarliya ratta
+Ye noobde, ye whack log, bas chale chaba jaau kaccha
+Ab jisko lalkaarna (Senpai!), humein to aajao kaksha`,
+    "music/song3.mp3": `🎵 Song 3 Lyrics\n(Write your lyrics here)`,
+    "music/song3.mp3": `🎵 Song 3 Lyrics\n(Write your lyrics here)`,
+  };
+
+  playlistItems.forEach(item => {
+    item.addEventListener("click", () => {
+      // Remove active class from all
+      playlistItems.forEach(el => el.classList.remove("active"));
+      item.classList.add("active");
+
+      const src = item.getAttribute("data-src");
+      audioPlayer.src = src;
+      audioPlayer.play();
+
+      // Update lyrics
+      lyricsBox.textContent = lyrics[src] || "Lyrics not available for this song.";
+    });
+  });
+</script>
+<!-- 🎵 Music Section End -->
+
+<!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> pikslnet • Crafted in electric purple ⚡</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/music.js" defer></script>
+</body>
+</html>
