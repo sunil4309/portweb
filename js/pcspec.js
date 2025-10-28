@@ -1,7 +1,7 @@
 const pcProducts = [
   {
     name: "Graphic Card",
-    description: "RTX 4060 | 8GB,",
+    description: "RTX 4060 | 8GB | Full Ray Tracing | GDDR6 |  DLSS 3 3rd Gen ",
     price: "₹ 92,000",
     img: "spec/rtx 4060.png"
   },
@@ -65,6 +65,12 @@ const pcProducts = [
     description: "1000Hz Polling Rate | Hallsense™ Magnetic Hall 3D Joysticks & Triggers | EZ Click Macros | Dual Vibration",
     price: "₹ 2,499",
     img: "spec/Elitex2.png"
+  },
+    {
+    name: "Keyboard & mouse (2)",
+    description: "1000Hz Polling Rate | Hallsense™ Magnetic Hall 3D Joysticks & Triggers | EZ Click Macros | Dual Vibration",
+    price: "₹ 899",
+    img: "spec/Evon combo.png"
   },
 ];
 
