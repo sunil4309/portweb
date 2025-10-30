@@ -68,7 +68,7 @@ const pcProducts = [
   },
     {
     name: "Keyboard & mouse (2)",
-    description: "1000Hz Polling Rate | Hallsense™ Magnetic Hall 3D Joysticks & Triggers | EZ Click Macros | Dual Vibration",
+    description: "RGB back light | 12000 DPI | 5 buttons mouse",
     price: "₹ 899",
     img: "spec/Evon combo.png"
   },
