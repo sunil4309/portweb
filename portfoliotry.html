@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/portfoilo.css">
+  <script src="js/portfolio.js" defer></script>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="index.html">
+    <img src="images/logo.svg" class="site-logo"/>
+    <span class="site-name"></span>
+  </a>
+  <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a class="active" href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="music.html">Music</a>
+    <a href="pcspec.html">PC Specs</a>
+  </nav>
+</header>
+
+<main>
+    <main class="portfolio-page">
+    <!-- Hero -->
+    <section class="portfolio-hero">
+      <h1 class="glitch" data-text="PORTFOLIO">PORTFOLIO</h1>
+      <p class="page-intro">
+         A collection of my graphic designs<br>posters, branding, UI, and more.  
+    Scroll down to explore my work.
+      </p>
+    </section>
+    
+ <div class="hero-buttons">
+  <a href="Branding.html" class="cyber-btn">BRANDING</a>
+  <a href="AIimage.html" class="cyber-btn">AI IMAGES</a>
+  <a href="contact.html" class="cyber-btn">HIRE ME</a>
+</div>
+
+
+
+ <!-- 🌟 Portfolio Section Start -->
+<section id="portfolio" class="portfolio-section">
+  <!-- 🌗 Theme Toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn"></button>
+  </div>
+
+  <!-- 👤 About Section -->
+  <div class="about">
+    <img src="portfolio/gfx profile - Copy.png" alt="Sunil Panda" class="profile-img" />
+    <div class="about-text">
+      <h2>Sunil Panda</h2>
+      <h4>Graphic Designer & Illustrator</h4>
+      <p>
+        Creative graphic designer with expertise in branding, digital, and print design.
+        Proficient in Adobe Creative Suite, with a strong eye for detail and passion for
+        visually compelling work. Looking to contribute innovative design solutions to a
+        dynamic team and help build strong, impactful brand identities.
+      </p>
+      <div class="about-links">
+        <a href="mailto:sunilpanda2004@gmail.com">📧 Email</a>
+        <a href="https://brokyedits.free.nf/@ign_broky" target="_blank">🌐 Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎓 Education & Experience -->
+  <div class="edu-exp">
+    <h3>Education & Experience</h3>
+    <div class="timeline">
+      <div class="card">
+        <h4>Exomind Studio</h4>
+        <p>Junior Graphic Designer</p>
+      </div>
+      <div class="card">
+        <h4>Indus University</h4>
+        <p>Pursuing B.Tech in Computer Science</p>
+      </div>
+      <div class="card">
+        <h4>Seventh Day Adventist Hr. School</h4>
+        <p>10th & 12th Passed</p>
+      </div>
+      <div class="card">
+        <h4>Freelancing</h4>
+        <p>Worked with multiple startups on branding & visual design</p>
+      </div>
+    </div>
+  </div>
+
+<!-- 💪 Skills Section -->
+<div class="skills">
+  <h3>Skills</h3>
+
+  <!-- Gradient definition for stroke color -->
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff2e9a"/>
+        <stop offset="100%" stop-color="#9b4dff"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="skills-grid">
+    <div class="circle-skill" data-percent="95">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50"></circle>
+      </svg>
+      <p class="percent">0%</p>
+      <h4>Graphic Design</h4>
+    </div>
+
+    <div class="circle-skill" data-percent="60">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50"></circle>
+      </svg>
+      <p class="percent">0%</p>
+      <h4>Illustration</h4>
+    </div>
+
+    <div class="circle-skill" data-percent="85">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50"></circle>
+      </svg>
+      <p class="percent">0%</p>
+      <h4>Communication</h4>
+    </div>
+
+    <div class="circle-skill" data-percent="80">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50"></circle>
+      </svg>
+      <p class="percent">0%</p>
+      <h4>Project Management</h4>
+    </div>
+
+    <div class="circle-skill" data-percent="88">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50"></circle>
+      </svg>
+      <p class="percent">0%</p>
+      <h4>Creative Direction</h4>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- 🖼️ Projects -->
+  <div class="projects">
+    <h3>My Works</h3>
+    <div class="project-grid">
+      <div class="project-card"><img src="portfolio/insane ace.png" alt="Project 1"></div>
+      <div class="project-card"><img src="portfolio/KJ Broky playtzz.jpg" alt="Project 2"></div>
+      <div class="project-card"><img src="portfolio/update 3.3.png" alt="Project 3"></div>
+      <div class="project-card"><img src="assets/work4.jpg" alt="Project 4"></div>
+    </div>
+  </div>
+
+  <!-- ✉️ Contact -->
+  <div class="contact">
+    <h3>Let's Connect</h3>
+    <p>Email: <a href="mailto:sunilpanda2004@gmail.com">sunilpanda2004@gmail.com</a></p>
+    <p>Portfolio: <a href="https://brokyedits.free.nf/@ign_broky" target="_blank">brokyedits.free.nf</a></p>
+  </div>
+</section>
+
+<!-- 🖼️ Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span id="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<!-- 🌟 Portfolio Section End -->
+
+<script src="js/portfolio.js" ></script>
+
+
+  </section>
+</main>
+<footer class="footer">
+  <p>© <span id="year">
+   </span> pikslnet &nbsp; • &nbsp; Crafted in electric purple</p>
+
+<script src="js/script.js" defer></script>
+<script src="js/portfolio.js" defer></script>
+</body>
+</html>
