@@ -173,7 +173,7 @@
   width: 0;
   border-radius: 6px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 10px rgba(111, 0, 255, 0.4);
+  box-shadow: 0 0 10px hwb(266 0% 0% / 0.4);
   transition: width 1s ease-out;
 }
 
@@ -196,21 +196,21 @@
   position: relative;
   transition: var(--transition);
   cursor: pointer;
-  border: 1px solid rgba(255, 46, 154, 0.2);
+  border: 2px solid hwb(266 0% 0% / 0.4);
 }
 
 .project-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(96, 5, 216, 0.4);
+  background: rgba(255, 255, 255, 0);
   opacity: 0;
   transition: var(--transition);
 }
 
 .project-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(155, 77, 255, 0.3);
+  box-shadow: 0 0 30px rgba(155, 77, 255, 0.3);
 }
 .project-card:hover::after {
   opacity: 1;
@@ -284,7 +284,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 45px;
 }
 
 .circle-skill {
@@ -300,14 +300,14 @@
 }
 
 .circle-skill svg {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   transform: rotate(-90deg);
 }
 
 .circle-skill circle {
   fill: none;
-  stroke-width: 10;
+  stroke-width: 9px;
   stroke-linecap: round;
 }
 
