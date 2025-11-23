@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="index.html">
+    <img src="images/logo.svg" class="site-logo"/>
+    <span class="site-name"></span>
+  </a>
+  <button class="hamburger" aria-label="Open Menu" id="menuBtn">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a class="active"href="Menu.html">MAIN MENU</a>
+  </nav>
+</header>
+<main>
+    <main class="portfolio-page">
+    <!-- Hero -->
+    <section class="portfolio-hero">
+      <h1 class="glitch" data-text="MAIN MENU">MAIN MENU</h1>
+      <p class="page-intro">
+         A collection of my graphic designs<br>posters, branding, UI, and more.  
+    Scroll down to explore my work.
+      </p>
+    </section>
+
+<section class="page-menu">
+  <h2 class="menu-title">Choose a Section</h2>
+
+  <div class="menu-grid">
+
+    <!-- Card 1 -->
+    <div class="menu-card">
+      <img src="assets/music.jpg" alt="Music Page">
+      <div class="menu-info">
+        <h3>Music Page</h3>
+        <p>Play songs, playlist & lyrics.</p>
+      </div>
+      <button class="menu-btn" onclick="window.location.href='music.html'">press</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="menu-card">
+      <img src="assets/portfolio.jpg" alt="Portfolio">
+      <div class="menu-info">
+        <h3>Portfolio Page</h3>
+        <p>Projects, skills, and resume.</p>
+      </div>
+      <button class="menu-btn" onclick="window.location.href='portfolio.html'">press</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="menu-card">
+      <img src="assets/gaming.jpg" alt="Gaming Page">
+      <div class="menu-info">
+        <h3>Gaming Page</h3>
+        <p>Your setup, PC specs, game stats.</p>
+      </div>
+      <button class="menu-btn" onclick="window.location.href='gaming.html'">press</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="menu-card">
+      <img src="assets/contact.jpg" alt="Contact">
+      <div class="menu-info">
+        <h3>Contact</h3>
+        <p>Socials & collaboration.</p>
+      </div>
+      <button class="menu-btn" onclick="window.location.href='contact.html'">press</button>
+    </div>
+</section>
+  </section>
+</main>
+<footer class="footer">
+  <p>© <span id="year">
+   </span> pikslnet &nbsp; • &nbsp; Crafted in electric purple</p>
+<script src="js/script.js" defer></script>
+</body>
+</html>
+
